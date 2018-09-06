@@ -1,0 +1,227 @@
+﻿
+@font-face {
+  font-family: 'DancingScript-Regular';
+  src: url('DancingScript-Regular.ttf') format('truetype');
+}
+body {
+  background: #02010a;
+  font-family: DancingScript-Regular;
+  width: 100%;
+  padding-left: 25px;
+  padding-right : 25px;
+}
+
+header {
+  background: #5b7989;
+  border-radius: 10px 10px 0 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding: 10px;
+  animation: Rebote 2s;
+}
+
+footer {
+  border-radius: 0px 0px 10px 10px;
+  background-color: #c6d5c5;
+  display: flex;
+  flex-flow : row wrap ;
+  padding: 10px;
+}
+
+
+#Titulo {
+  color: white;
+  text-shadow: 2px 2px 0 #02010a;
+  display: inline-block;  
+}
+
+
+#navegacion ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-content: center;
+}
+
+#navegacion ul li {
+    padding: 10px;
+    list-style-type: none;
+    font-weight: bold;
+    font-family: DancingScript-Regular  , cursive;
+    font-size: 1.3em;
+  }
+
+header h1 {
+  padding-left: 30px;
+  font-size: 2em;
+}
+
+#ImagenCentral {
+  text-align: center;
+  background-color: #82c3a6;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;  
+}
+
+#ImagenUno {
+  width: 90%;
+  -webkit-filter: drop-shadow(5px 5px 0px #02010a);
+  filter: drop-shadow(5px 5px 0px #02010a);
+  height:350px;
+}
+#ImegenesSecundarias {
+  text-align: center;
+  background-color: #d5c75f;
+  border: 1px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#ImagenDos {
+  width: 45%;
+  margin: 10px;
+  height: 250px;
+  transition-duration: 2s;
+  transition-property: transform,border,filter;
+  -webkit-filter: drop-shadow(5px 5px 0px #02010a);
+  filter: drop-shadow(5px 5px 0px #02010a);
+}
+  #ImagenDos:hover {
+    transform: rotate(10deg);
+    border: 2px solid;
+    -webkit-filter:drop-shadow(15px 20px 25px #82c3a6);
+    filter: drop-shadow(15px 20px 25px #82c3a6);
+  }
+
+#ImagenTres {
+  margin: 10px;
+  transition-duration: 2s;
+  transition-property: transform,border,filter;
+  -webkit-filter: drop-shadow(5px 5px 0px #02010a);
+  filter: drop-shadow(5px 5px 0px #02010a);
+}
+  #ImagenTres:hover {    
+    transform : translate3d(20px,-5px,0px) ;    
+    border: 2px solid;
+    -webkit-filter: drop-shadow(15px 20px 25px #82c3a6);
+    filter: drop-shadow(15px 20px 25px #82c3a6);
+  }
+
+#ContenedorImagenRetratos {
+  display:flex;
+  flex-flow:row wrap;
+  background-color:#d5c75f;
+  border:1px;
+  align-content:center;
+}
+
+#retratoUno  , #paisajeUno{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  margin :15px;
+}
+#retratoDos, #retratoCuatro, #retratoSeis, #paisajeDos, #paisajeCuatro, #paisajeSeis {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  margin: 15px;
+}
+#retratoTres, #paisajeTres {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+  margin: 15px;
+}
+#retratoCinco, #paisajeCinco {
+  margin: 15px;
+}
+
+
+  /*MEDIA QUERIES*/
+  @media(min-width:900px) {
+    #Contenido {
+    width: 900px;
+    position: center;
+  }
+
+  #ImagenTres {
+    width: 45%;
+    height: 250px;
+  }
+
+  #ImagenDos {
+    width: 45%;
+    height: 250px;
+  }
+  footer div {
+    margin: 5px;
+    width: 22%;
+  }
+  #Titulo {   
+    display: inline-block;
+  }
+
+  #navegacion {
+    margin-left: 450px;
+    margin-right: auto;
+    display: inline-block;
+  }
+    #retratoUno, #retratoDos, #retratoTres, #retratoCuatro, #retratoCinco, #retratoSeis,#paisajeUno ,#paisajeDos,#paisajeTres,#paisajeCuatro,#paisajeCinco,#paisajeSeis  {
+      width: 25%;
+    }
+}
+
+@media(max-width:899px) {
+  #Contenido {
+    width: 100%;
+    position: center;
+  }
+  #ImagenDos {
+    width: 100%;
+    height: 200px;
+  }
+  #ImagenTres {
+    width: 100%;
+    height: 200px;
+  }
+  footer div {
+    margin: 5px;
+    width: 100%;
+  }
+  #Titulo {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #navegacion ul  li {
+    align-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  #retratoUno, #retratoDos, #retratoTres, #retratoCuatro, #retratoCinco, #retratoSeis, #paisajeUno, #paisajeDos, #paisajeTres, #paisajeCuatro, #paisajeCinco, #paisajeSeis {
+    width: 100%;
+  }
+
+ footer  img[src$=png] {
+    width:45px;  
+ }
+}
+
+/*ANIMATION*/
+@-webkit-keyframes Rebote{
+  0% {
+    margin-top:150%
+  }
+  60% {
+    margin-top: -5%
+  }
+  100% {
+    margin-top: -0%
+  }
+}
+
+
+
+
+
